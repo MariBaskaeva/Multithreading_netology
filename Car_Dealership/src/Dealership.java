@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Dealership {
-    final int TIMEOUT = 3000;
     final Seller seller = new Seller(this);
     List<Auto> autos = new ArrayList<>(10);
 
