@@ -7,12 +7,7 @@ public class Main {
         Scanner in = new Scanner(System.in);
         String message = in.nextLine();
 
-        Function<String, Object[]> translator = x -> {
-            Object[] dictionary = Arrays.stream(x.split(" "))
-                    .toArray();
-            Arrays.sort(dictionary);
-            return dictionary;
-        };
+        Function<String, Object[]> translator = x -> Arrays.stream(x.split(" ")).distinct().sorted().toArray();
 
         Object[] result = translator.apply(message);
 
